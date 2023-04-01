@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  personagem: any = {
-    nome: 'Miguel Garza',
-    imagem:'../../assets/miguel.jpg',
-    nomeAtor: 'Sebastian Rulli',
-    descricao:
-      'Miguel Garza volta de Tóquio ao México para assumir o posto do avô no comando de um cartel. '+ 
-      'Agora terá de disputar o controle dos negócios com dois rivais'
-  };
+  @Input() personagem!: Personagem;
+}
+
+export interface Personagem {
+  nome: String;
+  imagem: String;
+  nomeAtor: String;
+  descricao: String;
 }
