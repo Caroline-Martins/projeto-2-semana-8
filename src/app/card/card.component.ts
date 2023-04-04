@@ -11,7 +11,7 @@ export class CardComponent {
 
 export interface Personagem {
   nome: String;
-  imagem: String;
+  imagem: String; 
   nomeAtor: String;
   descricao: String;
 }
